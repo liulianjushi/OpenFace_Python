@@ -1,0 +1,42 @@
+version: 1.0.{build}
+branches:
+  only:
+  - develop
+  - master
+  - feature/code_cleanup
+max_jobs: 4  
+configuration:
+- Release
+- Debug
+platform:
+- x64
+- Win32
+# scripts that run after cloning repository
+install:
+  - ps: $source = "https://www.dropbox.com/s/7na5qsjzz8yfoer/cen_patches_0.25_of.dat?dl=1"
+  - ps: $destination = "lib/local/LandmarkDetector/model/patch_experts/cen_patches_0.25_of.dat"
+  - ps: Invoke-WebRequest $source -OutFile $destination
+  - ps: $source = "https://www.dropbox.com/s/k7bj804cyiu474t/cen_patches_0.35_of.dat?dl=1"
+  - ps: $destination = "lib/local/LandmarkDetector/model/patch_experts/cen_patches_0.35_of.dat"
+  - ps: Invoke-WebRequest $source -OutFile $destination
+  - ps: $source = "https://www.dropbox.com/s/ixt4vkbmxgab1iu/cen_patches_0.50_of.dat?dl=1"
+  - ps: $destination = "lib/local/LandmarkDetector/model/patch_experts/cen_patches_0.50_of.dat"
+  - ps: Invoke-WebRequest $source -OutFile $destination
+  - ps: $source = "https://www.dropbox.com/s/2t5t1sdpshzfhpj/cen_patches_1.00_of.dat?dl=1"
+  - ps: $destination = "lib/local/LandmarkDetector/model/patch_experts/cen_patches_1.00_of.dat"
+  - ps: Invoke-WebRequest $source -OutFile $destination
+
+build:
+  project: OpenFace.sln
+  verbosity: minimal
+test_script:
+# C++  
+  - cmd: dir
+  - cmd: if exist x64 (cd x64)
+  - cmd: if exist Debug (cd Debug)
+  - cmd: if exist Release (cd Release)
+  - cmd: dir
+  - cmd: if exist "../samples" (FaceLandmarkImg.exe -inroot ../samples -f sample1.jpg -out_dir out_data -q) else (FaceLandmarkImg.exe -inroot ../../samples -f sample1.jpg -out_dir out_data -q)
+  - cmd: if exist "../samples" (FaceLandmarkVidMulti.exe -fdir ../samples/image_sequence -q -mloc model/main_clnf_general.txt) else (FaceLandmarkVidMulti.exe -fdir ../../samples/image_sequence -q -mloc model/main_clnf_general.txt)
+  - cmd: if exist "../samples" (FeatureExtraction.exe -fdir "../samples/image_sequence" -q) else (FeatureExtraction.exe -fdir "../../samples/image_sequence" -q)
+  - cmd: if exist "../samples" (FaceLandmarkVid.exe -f "../samples/default.wmv"  -q) else (FaceLandmarkVid.exe -f "../../samples/default.wmv" -q)

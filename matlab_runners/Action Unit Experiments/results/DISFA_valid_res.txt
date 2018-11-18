@@ -1,0 +1,12 @@
+AU1 results - corr 0.846, rms 0.386, ccc - 0.824
+AU2 results - corr 0.766, rms 0.441, ccc - 0.667
+AU4 results - corr 0.870, rms 0.573, ccc - 0.843
+AU5 results - corr 0.767, rms 0.174, ccc - 0.731
+AU6 results - corr 0.725, rms 0.580, ccc - 0.685
+AU9 results - corr 0.736, rms 0.391, ccc - 0.654
+AU12 results - corr 0.866, rms 0.504, ccc - 0.852
+AU15 results - corr 0.754, rms 0.268, ccc - 0.721
+AU17 results - corr 0.613, rms 0.568, ccc - 0.529
+AU20 results - corr 0.587, rms 0.326, ccc - 0.559
+AU25 results - corr 0.929, rms 0.495, ccc - 0.919
+AU26 results - corr 0.814, rms 0.441, ccc - 0.784

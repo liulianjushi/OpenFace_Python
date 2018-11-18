@@ -1,0 +1,17 @@
+AU1 intensity, Corr - 0.683, RMS - 0.837, CCC - 0.579
+AU2 intensity, Corr - 0.664, RMS - 0.829, CCC - 0.613
+AU4 intensity, Corr - 0.770, RMS - 0.676, CCC - 0.728
+AU5 intensity, Corr - 0.747, RMS - 0.748, CCC - 0.680
+AU6 intensity, Corr - 0.555, RMS - 0.778, CCC - 0.522
+AU7 intensity, Corr - 0.830, RMS - 0.748, CCC - 0.813
+AU9 intensity, Corr - 0.756, RMS - 0.620, CCC - 0.700
+AU10 intensity, Corr - 0.474, RMS - 0.822, CCC - 0.434
+AU12 intensity, Corr - 0.820, RMS - 0.689, CCC - 0.780
+AU14 intensity, Corr - 0.349, RMS - 0.964, CCC - 0.264
+AU15 intensity, Corr - 0.481, RMS - 0.790, CCC - 0.364
+AU17 intensity, Corr - 0.556, RMS - 0.980, CCC - 0.453
+AU20 intensity, Corr - 0.426, RMS - 0.892, CCC - 0.289
+AU23 intensity, Corr - 0.359, RMS - 0.658, CCC - 0.295
+AU25 intensity, Corr - 0.794, RMS - 0.932, CCC - 0.750
+AU26 intensity, Corr - 0.518, RMS - 0.977, CCC - 0.451
+AU45 intensity, Corr - 0.854, RMS - 0.611, CCC - 0.817
